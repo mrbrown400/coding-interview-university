@@ -9,7 +9,8 @@ int main(){
         if (c == ' ' || c == '\n' || c == '\t')
             printf("\n");
         else
-            putchar(c);
+            //putchar(c);
+            printf("%d", c);
     }
     return 0;
 }
