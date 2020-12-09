@@ -2,7 +2,6 @@
 #define MAXLINE 1000
 
 int getLine(char line[], int maxline);
-void copy(char to[], char from[]);
 
 int main(){
     int len, max;
@@ -11,13 +10,9 @@ int main(){
     max = 0;
     while((len = getLine(line, MAXLINE)) > 0){
         if (len > 80){
-            max = len;
-            copy(longest, line);
+            printf("%s, %d", line, len);
         }
     }
-    if ( max > 0)
-        printf("%s, %d", longest, max);
-    return 0;
 }
 
 int getLine(char s[], int lim){
@@ -33,10 +28,3 @@ int getLine(char s[], int lim){
     return i;
 }
 
-void copy(char to[], char from[]){
-    int i;
-
-    i=0;
-    while((to[i] = from[i]) != '\0')
-        ++i;
-}
